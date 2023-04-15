@@ -8,6 +8,10 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
 {
+	// ROUND COUNTER
+	public int roundCounter;
+	public TextMeshProUGUI displayRoundCounter;
+
 	// SPECIFY THESE IN INSPECTOR
 	public GameObject playerPrefab;
 	public GameObject enemyPrefab;
@@ -34,6 +38,7 @@ public class BattleSystem : MonoBehaviour
 		// BEGIN BATTLE  
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
+		roundCounter++;
     }
 
 	IEnumerator SetupBattle()
@@ -41,10 +46,13 @@ public class BattleSystem : MonoBehaviour
 		// SPAWN PLAYER , RETRIEVE PLAYER INFO
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
 		playerUnit = playerGO.GetComponent<Unit>();
+        playerGO.GetComponent<Rigidbody2D>().isKinematic = true;
 
-		// SPAWN ENEMY , RETRIEVE ENEMY INFO 
-		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
+
+        // SPAWN ENEMY , RETRIEVE ENEMY INFO 
+        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
 		enemyUnit = enemyGO.GetComponent<Unit>();
+		enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
 
 		// DISPLAY ENCOUNTER TEXT (MIGHT NOT WANT THIS)
 		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
@@ -55,6 +63,8 @@ public class BattleSystem : MonoBehaviour
 
 		yield return new WaitForSeconds(2f);
 
+		roundCounter = 0;
+		displayRoundCounter.text = "0";
 		state = BattleState.PLAYERTURN;
 		PlayerTurn();
 	}
@@ -102,7 +112,10 @@ public class BattleSystem : MonoBehaviour
 			EndBattle();
 		} else
 		{
-			state = BattleState.PLAYERTURN;
+            // Round Counter 
+            roundCounter++;
+            displayRoundCounter.text = roundCounter.ToString();
+            state = BattleState.PLAYERTURN;
 			PlayerTurn();
 		}
 

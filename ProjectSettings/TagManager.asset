@@ -7,6 +7,7 @@ TagManager:
   - BodyTentacleArm
   - BodyDollEye
   - BodyFrogLeg
+  - Enemy
   layers:
   - Default
   - TransparentFX

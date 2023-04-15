@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     void Update(){
         // basic character movement
         moveChar(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+
+        // Save player position outside of fight
     }
     
     void moveChar(Vector2 direction) {
@@ -52,5 +54,7 @@ public class Player : MonoBehaviour
         if (c.gameObject.transform.tag.StartsWith("Body")) {
             promptPlayer(c.gameObject);
         }        
+
+        // Collision with enemy 
     }
 }
