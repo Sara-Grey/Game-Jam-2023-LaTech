@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dust Bunny sprites_0
+      name: Dust Bunny eyes
       rect:
         serializedVersion: 2
         x: 150
@@ -113,7 +113,7 @@ TextureImporter:
         width: 319
         height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dust Bunny sprites_1
+      name: Dust Bunny head
       rect:
         serializedVersion: 2
         x: 0
@@ -134,7 +134,7 @@ TextureImporter:
         width: 890
         height: 982
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dust Bunny sprites_2
+      name: Dust Bunny body
       rect:
         serializedVersion: 2
         x: 1106
@@ -155,7 +155,7 @@ TextureImporter:
         width: 868
         height: 900
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,15 +168,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dust Bunny sprites_3
+      name: Dust Bunny right arm
       rect:
         serializedVersion: 2
         x: 805
-        y: 1698
+        y: 1702
         width: 527
         height: 703
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.36815456, y: 0.7718025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,15 +189,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dust Bunny sprites_4
+      name: Dust Bunny left arm
       rect:
         serializedVersion: 2
         x: 150
-        y: 1685
+        y: 1681
         width: 428
         height: 687
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.55073196, y: 0.83502346}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,15 +210,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dust Bunny sprites_5
+      name: Dust Bunny right leg
       rect:
         serializedVersion: 2
         x: 1015
         y: 803
         width: 356
         height: 667
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43900806, y: 0.8385586}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,15 +231,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dust Bunny sprites_6
+      name: Dust Bunny left leg
       rect:
         serializedVersion: 2
         x: 239
         y: 846
         width: 310
         height: 643
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.40193975, y: 0.8241804}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,13 +262,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dust Bunny sprites_0: 310873415
-      Dust Bunny sprites_1: 343521255
-      Dust Bunny sprites_2: 2005496430
-      Dust Bunny sprites_3: -781287787
-      Dust Bunny sprites_4: -453445922
-      Dust Bunny sprites_5: 113843687
-      Dust Bunny sprites_6: 1605914383
+      Dust Bunny body: 2005496430
+      Dust Bunny eyes: 310873415
+      Dust Bunny head: 343521255
+      Dust Bunny left arm: -453445922
+      Dust Bunny left leg: 1605914383
+      Dust Bunny right arm: -781287787
+      Dust Bunny right leg: 113843687
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
