@@ -1367,15 +1367,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9222949170403943033, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 29.710152
+      value: 4.7956157
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222949170403943038, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.26582
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222949170403943038, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.26582
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222949170403943038, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.26582
       objectReference: {fileID: 0}
     - target: {fileID: 9222949170403943038, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999234
+      value: 0.99661946
       objectReference: {fileID: 0}
     - target: {fileID: 9222949170403943038, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.01237591
+      value: -0.08215668
       objectReference: {fileID: 0}
     - target: {fileID: 9222949171261525386, guid: 443371739a71547448a40ec9c6c661b2, type: 3}
       propertyPath: m_Name
