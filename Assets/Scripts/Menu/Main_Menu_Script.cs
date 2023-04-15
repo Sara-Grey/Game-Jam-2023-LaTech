@@ -7,6 +7,7 @@ public class Main_Menu_Script : MonoBehaviour
 {
     public int Attic;
     public int Control;
+    public int Credit;
 
     public void StartGame()
     {
@@ -16,5 +17,9 @@ public class Main_Menu_Script : MonoBehaviour
     public void Controls() 
     {
         SceneManager.LoadScene(Control);    
+    }
+    public void Credits() 
+    {
+        SceneManager.LoadScene(Credit);
     }
 }
