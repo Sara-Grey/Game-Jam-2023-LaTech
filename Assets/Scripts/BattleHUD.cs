@@ -9,20 +9,24 @@ public class BattleHUD : MonoBehaviour
 
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI levelText;
-	public TextMeshProUGUI xpText;
-	public TextMeshProUGUI hpText;
-	public Slider hpSlider;
+	public TextMeshProUGUI xpcurrent;
+	public TextMeshProUGUI xpmax;
+	public TextMeshProUGUI hpMax;
+    public TextMeshProUGUI hpcurrent;
+    public Slider hpSlider;
 
 	// DISPLAY UPDATED UNIT INFO WHEN CALLED 
 	public void SetHUD(Unit unit)
 	{
 		nameText.text = unit.unitName;
-		levelText.text = "Lvl " + unit.unitLevel;
+		levelText.text = "" + unit.unitLevel + "";
 		hpSlider.maxValue = unit.maxHP;
 		hpSlider.value = unit.currentHP;
-		hpText.text = "HP " + unit.currentHP + " / " + unit.maxHP;
-		xpText.text = "XP " + unit.difference + " / " + unit.xpMAX;
-	}
+		hpcurrent.text = "" + unit.currentHP + "";
+		hpMax.text = "" + unit.maxHP + "";
+		xpcurrent.text = "" + unit.currentXP + "";
+        xpmax.text = "" + unit.xpMAX + "";
+    }
 
 	// DISPLAY UPDATED UNIT HEALTH WHEN CALLED
 	// Called when damaged (or healed?) 

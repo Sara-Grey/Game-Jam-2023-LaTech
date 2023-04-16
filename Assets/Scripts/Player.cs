@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public GameObject playeritself;
     public GameObject MainCamera;
     public GameObject BattleCamera;
-
+    //public string enemyCollided;
     // Outside Calls 
     private CharacterController2D charCon;
     public Animator animator;
@@ -124,15 +124,17 @@ public class Player : MonoBehaviour
         }
     }
 
+
     #region Battle
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.StartsWith("Enemy"))
         {
+            battleCall.SpawnThis(collision.gameObject.name);
             Destroy(collision.gameObject);
             CameraSwitch(false, true);
-            battleCall.Start();
             
+            battleCall.Start();
 
 
         }
