@@ -688,7 +688,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 762860763, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
+  m_Sprite: {fileID: -567832344, guid: 57016e847a5866c48a59774df517fb8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -975,15 +975,15 @@ MonoBehaviour:
   MainCamera: {fileID: 0}
   BattleCamera: {fileID: 0}
   EntireBattleSystem: {fileID: 0}
+  playeritself: {fileID: 0}
   animator: {fileID: 684072600261706107}
   battleCall: {fileID: 0}
+  battleState: 0
   saveLocation: {fileID: 0}
   x: 0
   y: 0
   z: 0
-  x2: 0
-  y2: 0
-  z2: 0
+  movementPaused: 0
   jump: 0
   crouch: 0
   jumpsRemaining: 0
@@ -1107,9 +1107,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Buddy
   unitLevel: 1
+  yield: 0
   damage: 10
+  difference: 0
+  xpMAX: 0
+  currentXP: 0
   maxHP: 25
   currentHP: 25
+  firstbit: 0
+  lastbit: 0
+  product: 0
 --- !u!1 &5289272331451471726
 GameObject:
   m_ObjectHideFlags: 0
