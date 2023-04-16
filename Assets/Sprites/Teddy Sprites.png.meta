@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Teddy Sprites_0
+      name: Teddy head
       rect:
         serializedVersion: 2
         x: 0
@@ -126,7 +126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_1
+      name: Teddy nose
       rect:
         serializedVersion: 2
         x: 1339
@@ -147,7 +147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_2
+      name: Teddy eyes
       rect:
         serializedVersion: 2
         x: 1383
@@ -168,7 +168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_3
+      name: Teddy og body
       rect:
         serializedVersion: 2
         x: 151
@@ -189,7 +189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_4
+      name: Teddy R arm
       rect:
         serializedVersion: 2
         x: 1063
@@ -210,7 +210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_5
+      name: Teddy L arm
       rect:
         serializedVersion: 2
         x: 169
@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_6
+      name: Teddy L leg
       rect:
         serializedVersion: 2
         x: 221
@@ -252,7 +252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teddy Sprites_7
+      name: Teddy R leg
       rect:
         serializedVersion: 2
         x: 1149
@@ -283,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Teddy Sprites_0: 291501253
-      Teddy Sprites_1: 97764026
-      Teddy Sprites_2: -2001783477
-      Teddy Sprites_3: 762860763
-      Teddy Sprites_4: 71556189
-      Teddy Sprites_5: -1539524322
-      Teddy Sprites_6: 1082760036
-      Teddy Sprites_7: -201493942
+      Teddy L arm: -1539524322
+      Teddy L leg: 1082760036
+      Teddy R arm: 71556189
+      Teddy R leg: -201493942
+      Teddy eyes: -2001783477
+      Teddy head: 291501253
+      Teddy nose: 97764026
+      Teddy og body: 762860763
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
