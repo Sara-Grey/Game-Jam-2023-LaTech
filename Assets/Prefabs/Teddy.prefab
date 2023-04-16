@@ -800,6 +800,7 @@ GameObject:
   - component: {fileID: 684072600261706107}
   - component: {fileID: 8351258602120994993}
   - component: {fileID: 5550715290552985638}
+  - component: {fileID: 503939205}
   m_Layer: 0
   m_Name: Teddy
   m_TagString: Player
@@ -975,7 +976,7 @@ MonoBehaviour:
   MainCamera: {fileID: 0}
   BattleCamera: {fileID: 0}
   EntireBattleSystem: {fileID: 0}
-  playeritself: {fileID: 0}
+  playeritself: {fileID: 3934239860382520009}
   animator: {fileID: 684072600261706107}
   battleCall: {fileID: 0}
   battleState: 0
@@ -1108,15 +1109,41 @@ MonoBehaviour:
   unitName: Buddy
   unitLevel: 1
   yield: 0
-  damage: 10
+  damage: 100
   difference: 0
-  xpMAX: 0
+  xpMAX: 15
   currentXP: 0
   maxHP: 25
   currentHP: 25
   firstbit: 0
   lastbit: 0
   product: 0
+--- !u!61 &503939205
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934239860382520009}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.011512756, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2686319, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &5289272331451471726
 GameObject:
   m_ObjectHideFlags: 0

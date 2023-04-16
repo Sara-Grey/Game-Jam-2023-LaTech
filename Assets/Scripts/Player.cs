@@ -128,7 +128,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-
+            print("CONTACT");
             Destroy(collision.gameObject);
             CameraSwitch(false, true);
             battleCall.Start();
