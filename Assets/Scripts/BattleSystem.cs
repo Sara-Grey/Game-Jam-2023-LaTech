@@ -41,7 +41,7 @@ public class BattleSystem : MonoBehaviour
 	public EnemyHUD enemyHUD;
 
 	public BattleState state;
-	public GameObject enemyGO;
+	private GameObject enemyGO;
 
     public string spawnThis;
     // Start is called before the first frame update
