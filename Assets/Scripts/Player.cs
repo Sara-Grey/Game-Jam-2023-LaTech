@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
         {
             if (charCon.IsPlayerOnGround())
             {
-               // animator.SetTrigger("Grounded");
+               animator.SetTrigger("PlayerOnGround");
                 
             }
             if (PlayerCanMove())
@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
                 jump = false;
             }
             
-            //animator.SetFloat("Idle Run", Mathf.Abs(moveDir));
+            animator.SetFloat("PlayerIdleRun", Mathf.Abs(moveDir));
         }
     }
 
@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
             jumpsRemaining--;
             jump = true;
             jumpAction = true;
-           // animator.SetTrigger("Jump");
+           animator.SetTrigger("PlayerJump");
             
             charCon.m_Grounded = false;
         }
