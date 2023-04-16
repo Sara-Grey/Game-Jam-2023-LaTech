@@ -6,6 +6,10 @@ public class OutOfBox : MonoBehaviour
 {
     public int pushes = 0;
 
+    private void Update() 
+    {
+        return;
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
         pushes++;
