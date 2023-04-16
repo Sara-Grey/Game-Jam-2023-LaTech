@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BodyTentacleArm
   - BodyDollEye
   - BodyFrogLeg
   - Enemy
@@ -14,6 +13,10 @@ TagManager:
   - LeftArm
   - RightArm
   - Eye
+  - BodyChristmasEyes
+  - BodyDollEyes
+  - BodyCrowArm
+  - Skin
   layers:
   - Default
   - TransparentFX
