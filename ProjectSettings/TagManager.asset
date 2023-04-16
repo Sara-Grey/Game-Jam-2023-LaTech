@@ -9,6 +9,11 @@ TagManager:
   - BodyFrogLeg
   - Enemy
   - Ground
+  - LeftLeg
+  - RightLeg
+  - LeftArm
+  - RightArm
+  - Eye
   layers:
   - Default
   - TransparentFX

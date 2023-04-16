@@ -134,9 +134,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Triangle
   unitLevel: 2
+  yield: 35
   damage: 5
+  xpMAX: 0
+  currentXP: 0
   maxHP: 30
   currentHP: 30
+  firstbit: 0
+  lastbit: 0
+  product: 0
 --- !u!50 &1029948420
 Rigidbody2D:
   serializedVersion: 4

@@ -9,6 +9,8 @@ public class BattleHUD : MonoBehaviour
 
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI levelText;
+	public TextMeshProUGUI xpText;
+	public TextMeshProUGUI hpText;
 	public Slider hpSlider;
 
 	// DISPLAY UPDATED UNIT INFO WHEN CALLED 
@@ -18,6 +20,8 @@ public class BattleHUD : MonoBehaviour
 		levelText.text = "Lvl " + unit.unitLevel;
 		hpSlider.maxValue = unit.maxHP;
 		hpSlider.value = unit.currentHP;
+		hpText.text = "HP " + unit.currentHP + " / " + unit.maxHP;
+		xpText.text = "XP " + unit.difference + " / " + unit.xpMAX;
 	}
 
 	// DISPLAY UPDATED UNIT HEALTH WHEN CALLED

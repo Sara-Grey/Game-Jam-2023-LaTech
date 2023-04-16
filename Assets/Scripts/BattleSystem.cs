@@ -33,7 +33,7 @@ public class BattleSystem : MonoBehaviour
 
 	// VARIABLES TO DISPLAY HUDS 
 	public BattleHUD playerHUD;
-	public BattleHUD enemyHUD;
+	public EnemyHUD enemyHUD;
 
 	public BattleState state;
 
@@ -56,15 +56,6 @@ public class BattleSystem : MonoBehaviour
         player.transform.position = new Vector2(playerBattleStation.transform.position.x, playerBattleStation.transform.position.y);
         playerUnit = player.GetComponent<Unit>();
         player.GetComponent<Rigidbody2D>().isKinematic = true;
-
-		
-        // SPAWN PLAYER , RETRIEVE PLAYER INFO
-		/*
-        GameObject playerGO = Instantiate(player, playerBattleStation);
-        playerUnit = playerGO.GetComponent<Unit>();
-        playerGO.GetComponent<Rigidbody2D>().isKinematic = true;
-		*/
-
 
         // SPAWN ENEMY , RETRIEVE ENEMY INFO 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
@@ -142,6 +133,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		if(state == BattleState.WON)
 		{
+			playerUnit.GainXP(enemyUnit.unitLevel, enemyUnit.yield);
 			dialogueText.text = "You won the battle!";
 			StartCoroutine(TwoSecondDelay());
             player.GetComponent<Rigidbody2D>().isKinematic = false;
