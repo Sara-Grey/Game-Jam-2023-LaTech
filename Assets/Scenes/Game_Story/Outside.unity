@@ -2404,7 +2404,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010894895, y: -0.13402808}
+  m_Offset: {x: 0.18587129, y: -0.13402808}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2415,7 +2415,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.003113, y: 0.73194385}
+  m_Size: {x: 0.6095805, y: 0.73194385}
   m_EdgeRadius: 0
 --- !u!1001 &575324901
 PrefabInstance:
@@ -2431,6 +2431,10 @@ PrefabInstance:
     - target: {fileID: 791613305682398504, guid: cdcd2a8c2f01ad84c98f87941e7e7e9c, type: 3}
       propertyPath: m_Size.y
       value: 0.33076826
+      objectReference: {fileID: 0}
+    - target: {fileID: 791613305682398504, guid: cdcd2a8c2f01ad84c98f87941e7e7e9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 791613305682398504, guid: cdcd2a8c2f01ad84c98f87941e7e7e9c, type: 3}
       propertyPath: m_Offset.x
@@ -2488,6 +2492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossFrog
       objectReference: {fileID: 0}
+    - target: {fileID: 4159883684802716759, guid: cdcd2a8c2f01ad84c98f87941e7e7e9c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcd2a8c2f01ad84c98f87941e7e7e9c, type: 3}
 --- !u!1 &575569700
@@ -2500,6 +2508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575569702}
   - component: {fileID: 575569701}
+  - component: {fileID: 575569703}
   m_Layer: 0
   m_Name: OpenWindowCollider
   m_TagString: Untagged
@@ -2548,6 +2557,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575569703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575569700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16af47be5f91dc845acb40bd94756bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Outside: 2
 --- !u!1 &582982568
 GameObject:
   m_ObjectHideFlags: 0
