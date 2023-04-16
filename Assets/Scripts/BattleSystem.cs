@@ -13,15 +13,20 @@ public class BattleSystem : MonoBehaviour
 	public TextMeshProUGUI displayRoundCounter;
 
 	// SPECIFY THESE IN INSPECTOR
-	public GameObject playerPrefab;
+	public GameObject player;
 	public GameObject enemyPrefab;
 
 	// POSITION TO PLACE FIGHTERS 
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
 
-	// CALL UNIT SCRIPT CLASS FOR UNIT INFO (HEALTH, LEVEL, ECT....)
-	Unit playerUnit;
+	// other calls
+	public Player playerScript;
+    public GameObject EntireBattleSystem;
+	public GameObject MainCamera;
+
+    // CALL UNIT SCRIPT CLASS FOR UNIT INFO (HEALTH, LEVEL, ECT....)
+    Unit playerUnit;
 	Unit enemyUnit;
 
 	public TextMeshProUGUI dialogueText;
@@ -33,20 +38,32 @@ public class BattleSystem : MonoBehaviour
 	public BattleState state;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
 		// BEGIN BATTLE  
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
-		roundCounter++;
+		//roundCounter++;
+		playerScript.movementPaused = true;
+
     }
 
 	IEnumerator SetupBattle()
 	{
-		// SPAWN PLAYER , RETRIEVE PLAYER INFO
-		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-		playerUnit = playerGO.GetComponent<Unit>();
+        // SPAWN PLAYER , RETRIEVE PLAYER INFO
+		
+        player = GameObject.FindWithTag("Player");
+        player.transform.position = new Vector2(playerBattleStation.transform.position.x, playerBattleStation.transform.position.y);
+        playerUnit = player.GetComponent<Unit>();
+        player.GetComponent<Rigidbody2D>().isKinematic = true;
+
+		
+        // SPAWN PLAYER , RETRIEVE PLAYER INFO
+		/*
+        GameObject playerGO = Instantiate(player, playerBattleStation);
+        playerUnit = playerGO.GetComponent<Unit>();
         playerGO.GetComponent<Rigidbody2D>().isKinematic = true;
+		*/
 
 
         // SPAWN ENEMY , RETRIEVE ENEMY INFO 
@@ -126,6 +143,13 @@ public class BattleSystem : MonoBehaviour
 		if(state == BattleState.WON)
 		{
 			dialogueText.text = "You won the battle!";
+			StartCoroutine(TwoSecondDelay());
+            player.GetComponent<Rigidbody2D>().isKinematic = false;
+
+            player.transform.position = new Vector2(PlayerPrefs.GetFloat("x"),PlayerPrefs.GetFloat("y"));
+			playerScript.movementPaused = false;
+            playerScript.CameraSwitch(true, false);
+			
 		} else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "You were defeated.";
@@ -137,7 +161,11 @@ public class BattleSystem : MonoBehaviour
 		dialogueText.text = "Choose an action:";
 	}
 
-	IEnumerator PlayerHeal()
+	IEnumerator TwoSecondDelay()
+	{
+        yield return new WaitForSeconds(2f);
+    }
+    IEnumerator PlayerHeal()
 	{
 		playerUnit.Heal(5);
 

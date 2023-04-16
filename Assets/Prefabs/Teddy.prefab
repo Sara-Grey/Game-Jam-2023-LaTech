@@ -799,6 +799,7 @@ GameObject:
   - component: {fileID: 8351258602120994995}
   - component: {fileID: 684072600261706107}
   - component: {fileID: 8351258602120994993}
+  - component: {fileID: 5550715290552985638}
   m_Layer: 0
   m_Name: Teddy
   m_TagString: Player
@@ -971,7 +972,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b851bbc20656dd4e924f090c7e5df8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
+  BattleCamera: {fileID: 0}
+  EntireBattleSystem: {fileID: 0}
   animator: {fileID: 684072600261706107}
+  battleCall: {fileID: 0}
+  saveLocation: {fileID: 0}
+  x: 0
+  y: 0
+  z: 0
+  x2: 0
+  y2: 0
+  z2: 0
   jump: 0
   crouch: 0
   jumpsRemaining: 0
@@ -1081,6 +1093,23 @@ MonoBehaviour:
   m_DefaultActionMap: Char
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &5550715290552985638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3934239860382520009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc6d20ee469e464ab17bf2f05a90a8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Buddy
+  unitLevel: 1
+  damage: 10
+  maxHP: 25
+  currentHP: 25
 --- !u!1 &5289272331451471726
 GameObject:
   m_ObjectHideFlags: 0
