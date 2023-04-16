@@ -735,8 +735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 39.387512, y: 0}
-  m_SizeDelta: {x: -506.9397, y: -136.5}
+  m_AnchoredPosition: {x: -12.283386, y: 0}
+  m_SizeDelta: {x: -403.598, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903540230
 MonoBehaviour:
@@ -1108,15 +1108,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\t\t\t\t\tCredits\n----------------------------------------------------\nGame
-    Developers:\n\tColin Bumpass\n\tHailey Warshaw\n\tSara Grey\n\tThomas Nguyen\n\nProgrammers:\n\tColin
-    Bumpass\n\tSara Grey\n\tThomas Nguyen\n\nDesigner & Animator:\n\tHailey Warshaw\n\nSound
-    Designer:\n\tSara Grey\n\nMusic:\n\tMisconception \tby Myuu\n\tLights Out \t\tby
-    Myuu\n\tYou're Next\t\tby Myuu\n\n----------------------------------------------------\t\t\t  
-    \t              Special Thanks\n----------------------------------------------------\n\t\tKevin
-    Cherry\t\t\t       Jerry Berg\n\t\t\t   Louisiana Tech Univeristy\n\t\t\n\t\tGame
-    Jam 2023\t\t\tBlitz Studio\n----------------------------------------------------\t\t\t   
-    \n\t\t\t          THANK YOU FOR PLAYING \n\n  \t\t\t\t       BUDDY SAYS BYE...\n "
+  m_text: "\t\t\t\t\tCredits\n\nGame Developers:\n\tColin Bumpass\n\tHailey Warshaw\n\tSara
+    Grey\n\tThomas Nyguen\n\nProgrammers:\n\tColin Bumpass\n\tSara Grey\n\tThomas
+    Nyguen\n\nDesigner & Animator:\n\tHailey Warshaw\n\nSound Designer:\n\tSara Grey\n\nMusic:\n\tMisconception
+    \tby Myuu\n\tLights Out \t\tby Myuu\n\tYou're Next\t\tby Myuu\n\n\t\t\t   \t  
+    Special Thanks\n\t\tKevin Cherry\t\t\t       Jerry Berg\n\t\t\t   Louisiana Tech
+    Univeristy\n\t\t\n\t\tGame Jam 2023\t\t\tBlitz Studio\n\t\t\t    \n\t\t\t         
+    THANK YOU FOR PLAYING \n\n  \t\t\t\t       BUDDY SAYS BYE...\n "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 532f8153b3215c143b55ba2c3bfeff7f, type: 2}
   m_sharedMaterial: {fileID: -9217384059921679554, guid: 532f8153b3215c143b55ba2c3bfeff7f, type: 2}
