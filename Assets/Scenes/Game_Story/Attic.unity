@@ -8428,8 +8428,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
+      propertyPath: m_Color.g
+      value: 0.86388135
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.89886385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_LightType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.674
       objectReference: {fileID: 0}
     - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_Vertices.Array.size
@@ -8449,7 +8465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 4.4773064
+      value: 3.7891276
       objectReference: {fileID: 0}
     - target: {fileID: 3934239859096927546, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
@@ -9373,11 +9389,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3934239859096927549, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.75349534
+      value: 0.7589947
       objectReference: {fileID: 0}
     - target: {fileID: 3934239859096927549, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.65745336
+      value: -0.6510968
       objectReference: {fileID: 0}
     - target: {fileID: 3934239860382520008, guid: 3655071b8bab1504aaf316aa9bc1d45a, type: 3}
       propertyPath: m_RootOrder
