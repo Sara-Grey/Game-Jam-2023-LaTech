@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
 
             charCon.Move(moveDir * speed * Time.fixedDeltaTime, crouch, jump);
             jump = false;
-            animator.SetFloat("Idle Run", Mathf.Abs(moveDir));
+            //animator.SetFloat("Idle Run", Mathf.Abs(moveDir));
         }
     }
 
