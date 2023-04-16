@@ -1,60 +1,114 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private GameObject playerEye;
-    [SerializeField] private GameObject playerArm;
-    [SerializeField] private GameObject playerLeg;
+   
+    private float moveDir;
 
-    // Start is called before the first frame update
-    void Start()
+    private CharacterController2D charCon;
+
+    public Animator animator;
+    public bool jump;
+    private bool jumpAction = false;
+    public bool crouch;
+    public int jumpsRemaining;
+    public int maxJumps;
+    public float speed;
+    public bool alive = true;
+    
+    private bool up = false;
+    
+    private void Start()
     {
-         
+        charCon = GetComponent<CharacterController2D>();
+        jump = false;
+     
     }
 
-    // Update is called once per frame
-    void Update(){
-        // basic character movement
-        moveChar(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
-
-        // Save player position outside of fight
-    }
+    private void Update()
+    {
     
-    void moveChar(Vector2 direction) {
-        transform.Translate(direction * speed * Time.deltaTime);
-    }
-    
-    // not sure what to do with this, can remove
-    void jump(Vector2 direction) {
-        transform.Translate(direction * jumpForce * Time.deltaTime);
-    }
 
-    // prompt player if they want the body part or not, if yes set the corresponding body part to the gameobject 
-    void promptPlayer(GameObject part) {
-        // check the tags of the "body part" objects, assigns to player if contacted 
-        if (part.transform.tag.EndsWith("Eye")){
-            playerEye = part;
-            part.GetComponent<PowerUp>().Activate();
+        if (charCon.IsPlayerOnGround() && !jumpAction)
+        {
+            jumpsRemaining = maxJumps;
         }
-        else if (part.transform.tag.EndsWith("Arm")){
-            playerArm = part;
-        }
-        else if (part.transform.tag.EndsWith("Leg")){
-            playerLeg = part;
-        }
+    }
+    private void FixedUpdate()
+    {
+        if (alive)
+        {
+            if (charCon.IsPlayerOnGround())
+            {
+                animator.SetTrigger("Grounded");
+                
+            }
 
+            charCon.Move(moveDir * speed * Time.fixedDeltaTime, crouch, jump);
+            jump = false;
+            animator.SetFloat("Idle Run", Mathf.Abs(moveDir));
+        }
     }
 
-    void OnCollisionEnter2D(Collision2D c) {
-        // check for collision with a body part
-        if (c.gameObject.transform.tag.StartsWith("Body")) {
-            promptPlayer(c.gameObject);
-        }        
-
-        // Collision with enemy 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
+
+
+    public void LeftRight(InputAction.CallbackContext context)
+    {
+        moveDir = context.ReadValue<float>();
+        
+    }
+
+    public void Up(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            up = true;
+        }
+       
+        if (context.canceled)
+        {
+            up = false;
+        }
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (jumpsRemaining > 0 && context.started)
+        {
+            jumpsRemaining--;
+            jump = true;
+            jumpAction = true;
+           // animator.SetTrigger("Jump");
+            
+            charCon.m_Grounded = false;
+        }
+        if (context.canceled)
+        {
+            jumpAction = false;
+        }
+    }
+
+    public void Crouch(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            crouch = true;
+        }
+        else
+        {
+            crouch = false;
+        }
+    }
+
+
+
 }
