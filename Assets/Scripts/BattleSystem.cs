@@ -15,11 +15,11 @@ public class BattleSystem : MonoBehaviour
 
 	// SPECIFY THESE IN INSPECTOR
 	public GameObject player;
-	public GameObject enemyPrefab1;
-    //public GameObject enemyPrefab2;
-	//public GameObject enemyPrefab3;
-	//public GameObject enemyPrefab4;
-	//public GameObject enemyPrefab5;
+	public GameObject enemyPrefab1; //dustbunnies
+    public GameObject enemyPrefab2; // angel
+	public GameObject enemyPrefab3; // frog
+	public GameObject enemyPrefab4; // big frog
+	public GameObject enemyPrefab5; // boss
 
     // POSITION TO PLACE FIGHTERS 
     public Transform playerBattleStation;
@@ -77,11 +77,46 @@ public class BattleSystem : MonoBehaviour
             enemyUnit = enemyGO.GetComponent<Unit>();
             enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
         }
-        
-		
+        // SPAWN ENEMY , RETRIEVE ENEMY INFO 
+        if (spawnThis.StartsWith("Angel"))
+        {
+            enemyGO = Instantiate(enemyPrefab2, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        // SPAWN ENEMY , RETRIEVE ENEMY INFO 
+        if (spawnThis.StartsWith("Frog"))
+        {
+            enemyGO = Instantiate(enemyPrefab3, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        // SPAWN ENEMY , RETRIEVE ENEMY INFO 
+        if (spawnThis.StartsWith("Boss"))
+        {
+            enemyGO = Instantiate(enemyPrefab4, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        // SPAWN ENEMY , RETRIEVE ENEMY INFO 
+        if (spawnThis.StartsWith("New"))
+        {
+            enemyGO = Instantiate(enemyPrefab5, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        // SPAWN ENEMY , RETRIEVE ENEMY INFO 
+        if (spawnThis.StartsWith("Dust"))
+        {
+            enemyGO = Instantiate(enemyPrefab1, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
 
-		// DISPLAY ENCOUNTER TEXT (MIGHT NOT WANT THIS)
-		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
+
+
+        // DISPLAY ENCOUNTER TEXT (MIGHT NOT WANT THIS)
+        dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";
 
 		// DISPLAY HUDS
 		playerHUD.SetHUD(playerUnit);
@@ -106,8 +141,10 @@ public class BattleSystem : MonoBehaviour
 
 		if(isDead)
 		{
-			state = BattleState.WON;
-			EndBattle();
+			
+            StartCoroutine(TwoSecondDelay());
+            state = BattleState.WON;
+            EndBattle();
 		} else
 		{
 			state = BattleState.ENEMYTURN;
@@ -151,6 +188,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		if(state == BattleState.WON)
 		{
+			
 			playerUnit.GainXP(enemyUnit.unitLevel, enemyUnit.yield);
 			dialogueText.text = "You won the battle!";
 			StartCoroutine(TwoSecondDelay());

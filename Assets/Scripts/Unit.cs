@@ -62,5 +62,16 @@ public class Unit : MonoBehaviour
             LevelUp(currentXP);
         }
     }
+    private void Update()
+    {
+        if (currentHP <= 0)
+        {
+            foreach(Transform child in transform)
+            {
+                GameObject.Destroy(child.gameObject);
+            }
+            Destroy(gameObject);
+        }
+    }
 
 }

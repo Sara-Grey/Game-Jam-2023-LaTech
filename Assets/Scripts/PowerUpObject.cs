@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,7 +11,7 @@ public class PowerUpObject : MonoBehaviour
     public GameObject bodypart;
     public Sprite FrogPart;
     public Sprite ChristmasLight;
-    public Sprite DollEye;
+    public Sprite DollEyes;
     public Sprite CrowHead;
 
     public TextMeshProUGUI pickUpText;
@@ -70,7 +70,11 @@ public class PowerUpObject : MonoBehaviour
                 bodypart.GetComponent<SpriteRenderer>().flipY = true;
                 bodypart.GetComponent<SpriteRenderer>().drawMode = SpriteDrawMode.Sliced;
             }
-
+            if (gameObject.name.EndsWith("Eyes"))
+            {
+                bodypart = GameObject.FindGameObjectWithTag("Eye");
+                bodypart.GetComponent<SpriteRenderer>().sprite = DollEyes;
+            }
         }
     }
     public void OnTriggerExit2D(Collider2D collision)

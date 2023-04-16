@@ -10,11 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 791613305682398507}
   - component: {fileID: 791613305682398504}
+  - component: {fileID: 791613305682398505}
   - component: {fileID: 4159883684802716759}
-  - component: {fileID: 8908395009156455485}
-  - component: {fileID: 2932742746996147816}
   m_Layer: 0
-  m_Name: BossAngelCombat
+  m_Name: Angel
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,6 +61,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9593747, y: 2.0477884}
   m_EdgeRadius: 0
+--- !u!95 &791613305682398505
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791613305682398510}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8ca2c6a217b42ec4780732d5aaf9cccf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &4159883684802716759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88,51 +108,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8754261, y: 0.70006627}
   m_EdgeRadius: 0
---- !u!50 &8908395009156455485
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791613305682398510}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2932742746996147816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791613305682398510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc6d20ee469e464ab17bf2f05a90a8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitName: Seraph
-  unitLevel: 0
-  yield: 50
-  damage: 12
-  difference: 0
-  xpMAX: 0
-  currentXP: 0
-  maxHP: 45
-  currentHP: 45
-  firstbit: 0
-  lastbit: 0
-  product: 0
 --- !u!1 &5085245349102680777
 GameObject:
   m_ObjectHideFlags: 0
