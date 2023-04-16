@@ -1,20 +1,21 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEditor;
 using UnityEngine.UI;
 
 
 public class Player : MonoBehaviour
 {
+    
+    // Game Objects 
+    public GameObject EntireBattleSystem;
+    public GameObject playeritself;
     public GameObject MainCamera;
     public GameObject BattleCamera;
-
-    // Entire Battle system?? 
-    public GameObject EntireBattleSystem;
-
-    // player 
-    public GameObject playeritself;
+    //public string enemyCollided;
     // Outside Calls 
     private CharacterController2D charCon;
     public Animator animator;
@@ -43,7 +44,7 @@ public class Player : MonoBehaviour
         CameraSwitch(true, false);
         charCon = GetComponent<CharacterController2D>();
         jump = false;
- 
+       
     }
     public void CameraSwitch(bool main, bool battle)
     {
@@ -123,16 +124,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    #region Battle
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
 
+    #region Battle
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.StartsWith("Enemy"))
+        {
+            battleCall.SpawnThis(collision.gameObject.name);
             Destroy(collision.gameObject);
             CameraSwitch(false, true);
-            battleCall.Start();
             
+            battleCall.Start();
 
 
         }

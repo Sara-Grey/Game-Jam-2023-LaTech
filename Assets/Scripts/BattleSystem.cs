@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEditor;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -14,10 +15,14 @@ public class BattleSystem : MonoBehaviour
 
 	// SPECIFY THESE IN INSPECTOR
 	public GameObject player;
-	public GameObject enemyPrefab;
+	public GameObject enemyPrefab1;
+    //public GameObject enemyPrefab2;
+	//public GameObject enemyPrefab3;
+	//public GameObject enemyPrefab4;
+	//public GameObject enemyPrefab5;
 
-	// POSITION TO PLACE FIGHTERS 
-	public Transform playerBattleStation;
+    // POSITION TO PLACE FIGHTERS 
+    public Transform playerBattleStation;
 	public Transform enemyBattleStation;
 
 	// other calls
@@ -36,7 +41,9 @@ public class BattleSystem : MonoBehaviour
 	public EnemyHUD enemyHUD;
 
 	public BattleState state;
+	private GameObject enemyGO;
 
+    public string spawnThis;
     // Start is called before the first frame update
     public void Start()
     {
@@ -48,6 +55,12 @@ public class BattleSystem : MonoBehaviour
 
     }
 
+	public string SpawnThis(string enemyName)
+	{
+		spawnThis = enemyName;
+		return enemyName;
+	}
+
 	IEnumerator SetupBattle()
 	{
         // SPAWN PLAYER , RETRIEVE PLAYER INFO
@@ -58,9 +71,14 @@ public class BattleSystem : MonoBehaviour
         player.GetComponent<Rigidbody2D>().isKinematic = true;
 
         // SPAWN ENEMY , RETRIEVE ENEMY INFO 
-        GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-		enemyUnit = enemyGO.GetComponent<Unit>();
-		enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+		if (spawnThis.StartsWith("Dust"))
+		{
+            enemyGO = Instantiate(enemyPrefab1, enemyBattleStation);
+            enemyUnit = enemyGO.GetComponent<Unit>();
+            enemyGO.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        
+		
 
 		// DISPLAY ENCOUNTER TEXT (MIGHT NOT WANT THIS)
 		dialogueText.text = "A wild " + enemyUnit.unitName + " approaches...";

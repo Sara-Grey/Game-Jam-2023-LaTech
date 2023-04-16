@@ -4179,8 +4179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 934112322}
   levelText: {fileID: 392185608}
-  xpText: {fileID: 1075598272}
-  hpText: {fileID: 333277572}
+  xpcurrent: {fileID: 0}
+  xpmax: {fileID: 0}
+  hpMax: {fileID: 0}
+  hpcurrent: {fileID: 0}
   hpSlider: {fileID: 528401760}
 --- !u!1 &890254344
 GameObject:
@@ -4467,8 +4469,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1942979025}
   levelText: {fileID: 1486893661}
+  hpMax: {fileID: 0}
+  hpcurrent: {fileID: 0}
   hpSlider: {fileID: 1716163163}
-  hpText: {fileID: 1645027045}
 --- !u!224 &963601198
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8379,7 +8382,7 @@ MonoBehaviour:
   roundCounter: 0
   displayRoundCounter: {fileID: 1667206212}
   player: {fileID: 0}
-  enemyPrefab: {fileID: 3836293901725826807, guid: 6fa288c22d9c8424d915d1dff8f80b0d, type: 3}
+  enemyPrefab1: {fileID: 3836293901725826807, guid: 56751f6b1246ffd4c8ed70019b170a32, type: 3}
   playerBattleStation: {fileID: 1900470317}
   enemyBattleStation: {fileID: 406770547}
   playerScript: {fileID: 26743134}
@@ -8389,6 +8392,7 @@ MonoBehaviour:
   playerHUD: {fileID: 866323696}
   enemyHUD: {fileID: 963601197}
   state: 0
+  spawnThis: 
 --- !u!4 &1699938377
 Transform:
   m_ObjectHideFlags: 0

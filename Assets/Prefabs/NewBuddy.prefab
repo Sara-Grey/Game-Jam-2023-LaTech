@@ -1,54 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3029106224045169791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2075483507778977494}
-  - component: {fileID: 7230357019379125111}
-  m_Layer: 0
-  m_Name: Global Volume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2075483507778977494
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029106224045169791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3934239860382520008}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7230357019379125111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3029106224045169791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 323cc9b0f1600aa4685d2b3354e7964a, type: 2}
 --- !u!1 &3934239858364825377
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_Sprite: {fileID: -1539524322, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5294118, g: 0.058823533, b: 0.47450984, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -486,7 +437,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 1082760036, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.50980395, g: 0.050980397, b: 0.454902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -570,7 +521,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: 291501253, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5471698, g: 0.12595229, b: 0.47811782, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -654,7 +605,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: -201493942, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49803925, g: 0.054901965, b: 0.454902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -737,8 +688,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -567832344, guid: 57016e847a5866c48a59774df517fb8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 762860763, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
+  m_Color: {r: 0.42439073, g: 0.1161445, b: 0.7075472, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -822,7 +773,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 71556189, guid: de5696e616359d74abc3874fd0ca5b85, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49803925, g: 0.015686275, b: 0.27058825, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -844,14 +795,12 @@ GameObject:
   - component: {fileID: 3934239860382520012}
   - component: {fileID: 3934239860382520013}
   - component: {fileID: 3934239860382520010}
-  - component: {fileID: 8351258602120994994}
-  - component: {fileID: 8351258602120994995}
   - component: {fileID: 684072600261706107}
   - component: {fileID: 8351258602120994993}
   - component: {fileID: 5550715290552985638}
   - component: {fileID: 503939205}
   m_Layer: 0
-  m_Name: Teddy
+  m_Name: NewBuddy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,7 +827,6 @@ Transform:
   - {fileID: 7433356920838903097}
   - {fileID: 5289272331669681247}
   - {fileID: 8351258602977354884}
-  - {fileID: 2075483507778977494}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -981,66 +929,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8678019, y: 1.8581705}
   m_EdgeRadius: 0
---- !u!114 &8351258602120994994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3934239860382520009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8918704f94f1b5f4d9e30b36dc2f233f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 900
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
-  m_GroundCheck: {fileID: 8351258602977354884}
-  m_CeilingCheck: {fileID: 8351258602745675154}
-  k_GroundedRadius: 0.2
-  m_Grounded: 1
-  m_Rigidbody2D: {fileID: 3934239860382520013}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &8351258602120994995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3934239860382520009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b851bbc20656dd4e924f090c7e5df8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
-  BattleCamera: {fileID: 0}
-  EntireBattleSystem: {fileID: 0}
-  playeritself: {fileID: 3934239860382520009}
-  animator: {fileID: 684072600261706107}
-  battleCall: {fileID: 0}
-  battleState: 0
-  saveLocation: {fileID: 0}
-  x: 0
-  y: 0
-  z: 0
-  movementPaused: 0
-  jump: 0
-  crouch: 0
-  jumpsRemaining: 0
-  maxJumps: 1
-  speed: 70
-  alive: 1
 --- !u!95 &684072600261706107
 Animator:
   serializedVersion: 5
@@ -1097,7 +985,7 @@ MonoBehaviour:
     m_ActionName: Char/Right[/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8351258602120994995}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -1125,7 +1013,7 @@ MonoBehaviour:
     m_ActionName: Char/Throw[/Keyboard/shift]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8351258602120994995}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: LeftRight
         m_Mode: 0
@@ -1156,15 +1044,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc6d20ee469e464ab17bf2f05a90a8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Buddy
-  unitLevel: 1
-  yield: 0
-  damage: 100
+  unitName: NewBuddy
+  unitLevel: 100
+  yield: 100000000
+  damage: 50
   difference: 0
   xpMAX: 15
   currentXP: 0
-  maxHP: 25
-  currentHP: 25
+  maxHP: 200
+  currentHP: 200
   firstbit: 0
   lastbit: 0
   product: 0

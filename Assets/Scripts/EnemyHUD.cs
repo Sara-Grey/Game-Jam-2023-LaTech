@@ -7,20 +7,21 @@ using UnityEngine.UI;
 public class EnemyHUD : MonoBehaviour
 {
 
-	public TextMeshProUGUI nameText;
-	public TextMeshProUGUI levelText;
-	public Slider hpSlider;
-    public TextMeshProUGUI hpText;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI levelText;
+    public TextMeshProUGUI hpMax;
+    public TextMeshProUGUI hpcurrent;
+    public Slider hpSlider;
 
     // DISPLAY UPDATED UNIT INFO WHEN CALLED 
     public void SetHUD(Unit unit)
-	{
-		nameText.text = unit.unitName;
-		levelText.text = "Lvl " + unit.unitLevel;
-		hpSlider.maxValue = unit.maxHP;
-		hpSlider.value = unit.currentHP;
-        hpText.text = "HP " + unit.currentHP + " / " + unit.maxHP;
-
+    {
+        nameText.text = unit.unitName;
+        levelText.text = "" + unit.unitLevel + "";
+        hpSlider.maxValue = unit.maxHP;
+        hpSlider.value = unit.currentHP;
+        hpcurrent.text = "" + unit.currentHP + "";
+        hpMax.text = "" + unit.maxHP + "";
     }
 
 
@@ -29,7 +30,7 @@ public class EnemyHUD : MonoBehaviour
     public void SetHP(int hp)
 	{
 		hpSlider.value = hp;
-        hpText.text = "HP " + hp;
+        hpcurrent.text = "" + hp + "";
 
     }
 }
