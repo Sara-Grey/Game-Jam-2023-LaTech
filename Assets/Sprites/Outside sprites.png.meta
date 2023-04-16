@@ -231,7 +231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Outside sprites_0
+      name: Outside rain
       rect:
         serializedVersion: 2
         x: 2048
@@ -239,7 +239,7 @@ TextureImporter:
         width: 2048
         height: 2048
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,7 +268,7 @@ TextureImporter:
       Outside legless frog: 731865626
       Outside lightning: -264677571
       Outside loose pipe: -1907165568
-      Outside sprites_0: -1906123275
+      Outside rain: -1906123275
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

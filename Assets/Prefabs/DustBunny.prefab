@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 791613305682398505}
   - component: {fileID: 4159883684802716759}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: DustBunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
