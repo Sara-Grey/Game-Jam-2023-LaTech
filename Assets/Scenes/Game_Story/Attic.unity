@@ -1424,7 +1424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377392881}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0092999935, y: -2.1743, z: -5.2847996}
+  m_LocalPosition: {x: 0.009299994, y: -2.1743, z: -5.2848}
   m_LocalScale: {x: 1.5117751, y: 1.381489, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2009,7 +2009,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424318112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6790001, y: -0.16229963, z: -5.2847996}
+  m_LocalPosition: {x: 1.679, y: -0.1622996, z: -5.2848}
   m_LocalScale: {x: 1.5879002, y: 1.5314, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2259,6 +2259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440942995}
+  - component: {fileID: 440942996}
   m_Layer: 8
   m_Name: BoxAnim
   m_TagString: Untagged
@@ -2284,6 +2285,27 @@ Transform:
   m_Father: {fileID: 1950492023}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &440942996
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440942994}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df35eee45e67d7d4bac67fdd0dc688b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &454270381
 GameObject:
   m_ObjectHideFlags: 0
