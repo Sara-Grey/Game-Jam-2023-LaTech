@@ -774,25 +774,25 @@ TextureImporter:
       - name: bone_1
         guid: 19417879b0abff744a207624430f6590
         position: {x: 141.66345, y: 757.53625, z: 0}
-        rotation: {x: 0, y: 0, z: -0.48945662, w: 0.8720277}
-        length: 300.14673
+        rotation: {x: 0, y: 0, z: -0.48945656, w: 0.8720277}
+        length: 300.14676
         parentId: -1
         color:
           serializedVersion: 2
           rgba: 4278190335
       - name: bone_2
         guid: 2d486019fb878574f8b6b732d36c4cb0
-        position: {x: 300.1467, y: 0.00003976867, z: 0}
-        rotation: {x: 0, y: 0, z: -0.4921218, w: 0.8705264}
-        length: 276.79126
+        position: {x: 300.14673, y: 0.000049287744, z: 0}
+        rotation: {x: 0, y: 0, z: -0.49212182, w: 0.8705264}
+        length: 276.7912
         parentId: 0
         color:
           serializedVersion: 2
           rgba: 4278255615
       - name: bone_3
         guid: d2655a767779e4f479ffded003e85b79
-        position: {x: 276.79123, y: 0.00004006209, z: 0}
-        rotation: {x: 0, y: 0, z: 0.52287084, w: 0.8524119}
+        position: {x: 276.7913, y: -0.000014733223, z: 0}
+        rotation: {x: 0, y: 0, z: 0.52287084, w: 0.852412}
         length: 250.64526
         parentId: 1
         color:
