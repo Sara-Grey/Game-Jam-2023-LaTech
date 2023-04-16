@@ -11,7 +11,6 @@ public class Main_Menu_Script : MonoBehaviour
 
     public void StartGame()
     {
-
         SceneManager.LoadScene(Attic);
     }
     public void Controls() 
@@ -21,5 +20,9 @@ public class Main_Menu_Script : MonoBehaviour
     public void Credits() 
     {
         SceneManager.LoadScene(Credit);
+    }
+    public void Exit() 
+    {
+        Application.Quit();
     }
 }
